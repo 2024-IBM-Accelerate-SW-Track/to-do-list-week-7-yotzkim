@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const fsPromises = require("fs").promises;
 //const fs = require("fs");
 const todoDBName = "tododb";
-const useCloudant = true;
+const useCloudant = false;
 
 const basicAuth = require("express-basic-auth");
 var { authenticator, upsertUser, cookieAuth } = require("./authentication");
