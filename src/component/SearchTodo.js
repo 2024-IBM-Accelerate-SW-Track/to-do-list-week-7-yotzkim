@@ -22,13 +22,14 @@ class SearchTodo extends Component {
     // HTTP Client to send a GET request
     Axios({
       method: "GET",
-      url: "http://localhost:8080/items/search",
+      url: "http://localhost:8080/get/searchitem",
       headers: {
         "Content-Type": "application/json" 
       },
       params: {
         taskname: this.state.content
-      }
+      },
+      withCredentials: true
     }).then(res => {
       this.setState({
         tmpdata: JSON.stringify(res.data),
@@ -67,3 +68,4 @@ class SearchTodo extends Component {
 }
 
 export default SearchTodo;
+
